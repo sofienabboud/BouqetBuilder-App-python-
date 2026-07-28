@@ -1,0 +1,22 @@
+
+##Flower Bouqet App
+
+"""
+The goal of this app is to let the user chose a pot color, a flower of their choice,
+water it until it grows, once it is grown they can save it to their inventory until they have 12 flowers to make a bouqet to gift to their mother.
+"""
+class Game:
+
+    Pot color
+    Current flower
+    Growth stage
+    Water level
+    Inventory
+    Bouquet
+    Ribbon
+
+    if 
+
+
+    
+
