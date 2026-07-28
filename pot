@@ -1,0 +1,12 @@
+##Flower Bouqet App
+
+class Pot:
+    ##the class that would be the blueprint for the pot object
+    def __init__ (self, color):
+        self.color = color
+
+    blue_pot = 
+    red_pot = 
+    green_pot = 
+    yellow_pot = 
+    orange_pot = 
