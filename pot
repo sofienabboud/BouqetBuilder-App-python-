@@ -1,12 +1,18 @@
-##Flower Bouqet App
+
+##Bouqet Builder App
 
 class Pot:
     ##the class that would be the blueprint for the pot object
-    def __init__ (self, color):
+    def __init__ (self, color, water_level, max_level, price, purchased):
         self.color = color
+        self.water_level = water_level
+        self.max_level = max_level
+        self.price = price
+        self.purchased = purchased
 
-    blue_pot = 
-    red_pot = 
-    green_pot = 
-    yellow_pot = 
-    orange_pot = 
+    def plant_seed (self, seed):
+        if self.seed = None:
+            self.seed = seed
+
+    def
+            
