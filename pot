@@ -1,8 +1,16 @@
-
 ##Bouqet Builder App
 
 class Pot:
-    ##the class that would be the blueprint for the pot object
+##the class that would be the blueprint for the pot object
+    
+    """
+    constructor for the class that would include information stored about the pot:
+        -color
+        -water level
+        -max water level
+        -price 
+        -whether it is purchased
+    """
     def __init__ (self, color, water_level, max_level, price, purchased):
         self.color = color
         self.water_level = water_level
@@ -10,9 +18,60 @@ class Pot:
         self.price = price
         self.purchased = purchased
 
+    """
+    Methods that are actions that the pot is related to within the game:
+        -recieve seed
+        -recieve water
+        -check water level
+        -check if a seed is planted
+        -cut/pick flower or dead plant
+    """
+    ##Method to plant a seed
     def plant_seed (self, seed):
         if self.seed = None:
             self.seed = seed
+            print("You planted a seed!")
+        else:
+            print("There is already a seed in this pot.")
 
-    def
-            
+
+    ##Method to water a plant
+    def water_plant (self):
+        ##Make sure there is a seed first
+        if self.seed is None:
+            print("There is no seed in this pot!")
+            return
+        ##ask user how much they want to water
+        water_amount = int(input("How many mL of water would you like to give this plant? "))
+        ##add to water level
+        self.water_level += water_amount
+        if (self.water_level > 100):
+            print("Your plant has died due to overwatering!")
+            ##reset pot since the plant has died
+            self.seed = None
+            self.water_level = 0    
+        else:
+            print(f"You gave your plant {water_amount} mL of water!")
+            print(f"Current water level: {self.water_level} mL")
+                                
+    ##Method to check water level
+    def check_water(self):
+        if self.water_level == 0:
+            print("Your pot is empty.")
+        else:
+            print(f"Current water level: {self.water_level}")
+
+    ##Method to check if there is a seed in the pot
+    def check_seed(self):
+        if self.seed is None:
+            print("Your pot has no seed.")
+        else:
+            print("Your pot has a seed.")
+
+    ##Method to cut fully bloomed flower
+    def pick_flower(self)
+        if self.water_level == 100:
+            print("Congratulations! Your flower has bloomed!")
+            ##reset the pot
+            self.seed = None
+            self.water_level = 0
