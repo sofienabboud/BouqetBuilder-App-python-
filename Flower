@@ -1,0 +1,17 @@
+##Bouqet Builder App
+
+##Flower class
+class Flower:
+##the class that would be the blueprint for the flower object
+    """
+    constructor for the class that would include information stored about the flower:
+        -growth level
+        -flower type
+    """
+    def __init__ (self, growth_level, flower_type):
+        self.growth_level = growth_level
+        self.flower_type = flower_type
+    
+    """
+    No methods added since the flower is the dependent variable
+    """
