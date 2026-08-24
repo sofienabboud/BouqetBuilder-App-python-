@@ -1,5 +1,6 @@
 ##Bouqet Builder App
 
+##Pot Class
 class Pot:
 ##the class that would be the blueprint for the pot object
     
@@ -45,7 +46,7 @@ class Pot:
         water_amount = int(input("How many mL of water would you like to give this plant? "))
         ##add to water level
         self.water_level += water_amount
-        if (self.water_level > 100):
+        if self.water_level > self.seed.death_water:
             print("Your plant has died due to overwatering!")
             ##reset pot since the plant has died
             self.seed = None
@@ -70,8 +71,10 @@ class Pot:
 
     ##Method to cut fully bloomed flower
     def pick_flower(self)
-        if self.water_level == 100:
+        if self.water_level >= self.seed.bloom_water:
             print("Congratulations! Your flower has bloomed!")
             ##reset the pot
             self.seed = None
             self.water_level = 0
+
+    
